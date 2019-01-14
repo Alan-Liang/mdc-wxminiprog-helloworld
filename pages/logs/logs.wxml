@@ -1,0 +1,28 @@
+<!--logs.wxml-->
+<header class="mdc-top-app-bar">
+  <div class="mdc-top-app-bar__row">
+    <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+      <a class="material-icons mdc-top-app-bar__navigation-icon" bindtap="back">arrow_back</a>
+      <span class="mdc-top-app-bar__title">查看启动日志</span>
+    </section>
+  </div>
+</header>
+<view class="container log-list">
+<ul class="mdc-list mdc-top-app-bar--fixed-adjust">
+  <li class="mdc-list-item" wx:for="{{logs}}" wx:for-item="log">
+    {{index + 1}}. {{log}}
+  </li>
+  </ul>
+
+<div class="mdc-text-field mdc-text-field--outlined">
+  <input type="text" id="text" class="mdc-text-field__input" />
+  <div class="mdc-notched-outline">
+    <div class="mdc-notched-outline__leading"></div>
+    <div class="mdc-notched-outline__notch">
+      <label for="text" class="mdc-floating-label mdc-floating-label--float-above">Add record</label>
+    </div>
+    <div class="mdc-notched-outline__trailing"></div>
+  </div>
+</div><br />
+<button class="mdc-button mdc-button--raised" bindtap="addRecord"> 添加记录 </button>
+</view>

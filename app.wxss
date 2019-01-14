@@ -1,0 +1,31 @@
+/**app.wxss**/
+page{
+  --mdc-theme-primary: #c62828;
+  --mdc-theme-secondary: #2196f3;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0;
+  box-sizing: border-box;
+} 
+.mdc-top-app-bar, .mdc-drawer{
+  padding-top: 35rpx;
+}
+.mdc-top-app-bar--fixed-adjust.mdc-drawer{
+  padding-top:calc(35rpx + 64px) !important;
+}
+.mdc-floating-label.mdc-floating-label--float-above{
+  background-color:#fff;
+  padding: 0 4px;
+}
+
+br{
+  height:1em;
+}
+@import "./mdc.wxss";
+@import "./material-icons.wxss";
